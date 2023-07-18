@@ -64,7 +64,7 @@ PusherClient is a C++ library for interacting with the Pusher real-time messagin
     auto& channel = client.channel("your-channel-name", authCallback);
     ```
 
-   Note: This is a simple example, you have to read [pusher user authentication](https://pusher.com/docs/channels/server_api/authenticating-users/). for more details (for laravel you can see the [example](https://github.com/AbdoPrDZ/pusher_client_cpp/PusherClient/example/main.cpp)).
+   Note: This is a simple example, you have to read [pusher user authentication](https://pusher.com/docs/channels/server_api/authenticating-users/). for more details (for laravel you can see the [example](https://github.com/AbdoPrDZ/pusher_client_cpp/blob/main/PusherClient/example/main.cpp)).
 
 5. Bind event handlers to the channel:
 
