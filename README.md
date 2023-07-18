@@ -12,6 +12,7 @@ PusherClient is a C++ library for interacting with the Pusher real-time messagin
 ## Requirements
 
 - C++17 compatible compiler
+- [vcpkg](https://vcpkg.io), or [Conan](https://conan.io). (For install and include packages)
 - Boost.Asio
 - Boost.Beast
 - RapidJSON
@@ -25,7 +26,9 @@ PusherClient is a C++ library for interacting with the Pusher real-time messagin
     $ git clone https://github.com/AbdoPrDZ/pusher_client_cpp.git
     ```
 
-2. You can follow example include way to include the library.
+2. Install requirements packages using [vcpkg](https://vcpkg.io) or any other tool (like [conan](https://conan.io))
+
+3. You can follow example include way to include the library to your project.
 
 ## Usage
 

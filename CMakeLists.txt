@@ -6,11 +6,11 @@
 cmake_minimum_required(VERSION 3.8)
 project(PusherClient CXX)
 
-set(VCPKG_DIR D:/Programs/vcpkg)
+set(VCPKG_DIR D:/Programs/vcpkg) # replace with your vcpkg path
 set(CMAKE_TOOLCHAIN_FILE ${VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake)
 set(CMAKE_MODULE_PATH ${VCPKG_DIR}/scripts/buildsystems)
 
-include_directories(${VCPKG_DIR}/installed/x86-windows/include)
-link_directories(${VCPKG_DIR}/installed/x86-windows/lib)
+include_directories(${VCPKG_DIR}/installed/x64-windows/include)
+link_directories(${VCPKG_DIR}/installed/x64-windows/lib)
 
 add_subdirectory(PusherClient)
