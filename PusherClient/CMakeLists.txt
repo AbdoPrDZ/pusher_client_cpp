@@ -28,8 +28,5 @@ target_link_libraries(PusherClient INTERFACE
   cryptopp::cryptopp
 )
 
-# Specify installation rules
-install(TARGETS ${PROJECT_NAME} DESTINATION lib)
-
 # Include the example directory
 add_subdirectory(example)
