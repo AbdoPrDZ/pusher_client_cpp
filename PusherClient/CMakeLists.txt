@@ -9,7 +9,6 @@ include_directories(PusherClient_INCLUDE_DIRS)
 
 find_package(Boost 1.82.0 REQUIRED)
 find_package(RapidJSON CONFIG REQUIRED)
-# find_package(CURL REQUIRED)
 
 include_directories(${Boost_INCLUDE_DIRS}) 
 
@@ -23,7 +22,6 @@ target_include_directories(${PROJECT_NAME} INTERFACE
 
 target_link_libraries(PusherClient INTERFACE
   ${Boost_LIBRARIES}
-  # ${CURL_LIBRARIES}
   rapidjson
 )
 
