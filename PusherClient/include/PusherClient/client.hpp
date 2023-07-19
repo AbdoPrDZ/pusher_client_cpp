@@ -170,23 +170,6 @@ namespace PusherClient {
       socket_.write(boost::asio::buffer(msgBuffer.GetString(), msgBuffer.GetSize()));
     }
 
-    // Get all channels
-    // auto getChannels() const {
-    //   std::vector<ChannelProxy<SocketT>> channels;
-    //   for (const auto& pair : channels_) {
-    //     channels.push_back(pair.second);
-    //   }
-    //   return channels;
-    // }
-
-    // Unsubscribe from all channels
-    // void unsubscribeAll() {
-    //   auto channels = getChannels();
-    //   for (const auto& channel : channels) {
-    //     channel.unsubscribe();
-    //   }
-    // }
-
   private:
     // Read data from the WebSocket connection
     void readImpl() {

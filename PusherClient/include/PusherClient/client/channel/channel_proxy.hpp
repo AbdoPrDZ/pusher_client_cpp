@@ -139,21 +139,6 @@ namespace PusherClient {
         bool disconnectEventHandler(std::string const& event_name, FuncT&& func) {
           return signalFilter_->disconnect(event_name, std::forward<FuncT>(func));
         }
-
-        // Disconnect all event handlers from the channel
-        // void disconnectAllEventHandlers() {
-        //   signalFilter_->disconnectAll();
-        // }
-
-        // Unbind a specific event name from the channel
-        // void unbind(std::string const& event_name) {
-        //   signalFilter_->disconnectAll(event_name);
-        // }
-
-        // Unbind all event names from the channel
-        // void unbindAll() {
-        //   signalFilter_->disconnectAll();
-        // }
       };
     }
   }
