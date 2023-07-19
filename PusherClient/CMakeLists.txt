@@ -4,7 +4,8 @@
 #          https://www.boost.org/LICENSE_1_0.txt)
 
 # Add the include directories for your library
-include_directories(include)
+set(PusherClient_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE INTERNAL "")
+include_directories(PusherClient_INCLUDE_DIRS)
 
 find_package(Boost 1.82.0 REQUIRED)
 find_package(RapidJSON CONFIG REQUIRED)
@@ -18,7 +19,7 @@ add_library(${PROJECT_NAME} INTERFACE)
 
 target_include_directories(${PROJECT_NAME} INTERFACE
   ${Boost_INCLUDE_DIRS}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${PusherClient_INCLUDE_DIRS}
 )
 
 target_link_libraries(PusherClient INTERFACE

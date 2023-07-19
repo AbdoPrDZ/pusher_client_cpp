@@ -141,19 +141,19 @@ namespace PusherClient {
         }
 
         // Disconnect all event handlers from the channel
-        void disconnectAllEventHandlers() {
-          signalFilter_->disconnectAll();
-        }
+        // void disconnectAllEventHandlers() {
+        //   signalFilter_->disconnectAll();
+        // }
 
         // Unbind a specific event name from the channel
-        void unbind(std::string const& event_name) {
-          signalFilter_->disconnectAll(event_name);
-        }
+        // void unbind(std::string const& event_name) {
+        //   signalFilter_->disconnectAll(event_name);
+        // }
 
         // Unbind all event names from the channel
-        void unbindAll() {
-          signalFilter_->disconnectAll();
-        }
+        // void unbindAll() {
+        //   signalFilter_->disconnectAll();
+        // }
       };
     }
   }
