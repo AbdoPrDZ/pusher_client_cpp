@@ -13,7 +13,7 @@ const std::string key = "037c47e0cbdc81fb7144";
 const std::string cluster = "mt1";
 
 // Replace with your channel and event names
-const std::string channel_name = "public-messages";
+const std::string channel_name = "private-messages";
 const std::string event_name = "MessageCreatedEvent";
 
 // Replace with your authentication endpoint and token
