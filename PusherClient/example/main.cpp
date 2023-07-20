@@ -7,6 +7,9 @@
 #include <rapidjson/document.h>
 #include <PusherClient/client.hpp>
 #include <PusherClient/event.hpp>
+#include <PusherClient/client/channel.hpp>
+
+#include "flutter_manager/manager.hpp"
 
 // Replace with your Pusher credentials
 const std::string key = "037c47e0cbdc81fb7144";
@@ -225,7 +228,7 @@ static void m_asio_event_loop(boost::asio::io_service& svc) {
   }
 }
 
-int main() {
+int connectPusherClient() {
   boost::asio::io_service ios; // create io service
   // create Client object
   PusherClient::Client<boost::asio::ip::tcp::socket> client{ ios, key, cluster };
@@ -257,4 +260,8 @@ int main() {
   m_asio_event_loop(ios);
 
   return 0;
+}
+
+int main() {
+  return connectPusherClient();
 }

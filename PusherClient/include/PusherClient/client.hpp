@@ -23,7 +23,7 @@
 
 #include "event.hpp"
 #include "client/read.hpp"
-#include "client/channel/channel_proxy.hpp"
+#include "client/channel.hpp"
 #include "client/channel/signal_filter.hpp"
 
 namespace PusherClient {
@@ -112,9 +112,19 @@ namespace PusherClient {
       socket_.close(boost::beast::websocket::close_code::normal);
     }
 
+    // Create a new channel with the given name
+    auto channel(std::string const& name, bool subscribe = true) {
+      return client::channel::Channel<SocketT>(this, name, subscribe);
+    }
+
+    // Create a new channel with the given name and authentication string
+    auto channel(std::string const& name, std::string auth) {
+      return client::channel::Channel<SocketT>(this, name, auth);
+    }
+
     // Create a new channel with the given name and authentication callback
     auto channel(std::string const& name, AuthCallback authCallback) {
-      return client::channel::ChannelProxy<SocketT>(this, name, authCallback);
+      return client::channel::Channel<SocketT>(this, name, authCallback);
     }
 
     // Bind a callback function to all events
