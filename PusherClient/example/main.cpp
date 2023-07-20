@@ -9,8 +9,6 @@
 #include <PusherClient/event.hpp>
 #include <PusherClient/client/channel.hpp>
 
-#include "flutter_manager/manager.hpp"
-
 // Replace with your Pusher credentials
 const std::string key = "037c47e0cbdc81fb7144";
 const std::string cluster = "mt1";
